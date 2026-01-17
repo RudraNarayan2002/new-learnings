@@ -1,9 +1,11 @@
 import Counter from "./jotai/Counter";
+import ExampleUseEffectEvent from "./react-19-hooks/useEffectEvent/ExampleUseEffectEvent";
 
 const HomePage = () => {
   return (
     <div>
-      <Counter />
+      {/* <Counter /> */}
+      <ExampleUseEffectEvent />
     </div>
   );
 };

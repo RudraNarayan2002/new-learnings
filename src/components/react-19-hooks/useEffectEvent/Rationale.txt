@@ -1,0 +1,44 @@
+KEY DIFFERENCES: OLD WAY vs NEW WAY (useEffectEvent)
+
+--------------------------------------------------
+OLD WAY (Before useEffectEvent)
+--------------------------------------------------
+• useEffect depends on props/state
+• Must add state to dependency array
+• Causes re-running of effects
+• Risk of stale closures if deps are missing
+• Dependency arrays become complex
+• Harder to manage intervals, listeners
+• Performance issues due to re-subscribing
+• Common bugs in real-time apps
+
+
+--------------------------------------------------
+NEW WAY (With useEffectEvent)
+--------------------------------------------------
+• useEffectEvent always gets latest state
+• No need to add state in dependency array
+• Effect runs only once when needed
+• No stale closure problems
+• Clean and minimal dependency arrays
+• Easy to manage timers & event listeners
+• Better performance and stability
+• Ideal for real-time & async logic
+
+
+--------------------------------------------------
+WHEN TO USE useEffectEvent
+--------------------------------------------------
+• setInterval / setTimeout
+• Event listeners (window, socket, DOM)
+• WebSocket callbacks
+• Subscriptions
+• Analytics & tracking
+• Background syncing
+
+
+--------------------------------------------------
+MENTAL MODEL
+--------------------------------------------------
+• useEffect → WHEN something happens
+• useEffectEvent → WHAT should run with fresh data
